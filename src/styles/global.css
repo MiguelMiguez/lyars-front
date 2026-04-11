@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-surface-hover: #1e1e1e;
+  --color-border: #2a2a2a;
+  --color-text: #f0f0f0;
+  --color-text-muted: #888888;
+  --color-danger: #dc2626;
+  --color-danger-glow: rgba(220, 38, 38, 0.4);
+  --color-accent: #f97316;
+  --color-accent-glow: rgba(249, 115, 22, 0.4);
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "Cascadia Code", "Fira Code", monospace;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --transition: 150ms ease;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}

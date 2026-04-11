@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(220, 38, 38, 0.15) 0%,
+    var(--color-bg) 70%
+  );
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skull {
+  font-size: 5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-danger);
+  text-shadow:
+    0 0 40px var(--color-danger-glow),
+    0 0 80px var(--color-danger-glow);
+  animation: textGlow 1.5s ease-in-out infinite alternate;
+  text-align: center;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow:
+      0 0 20px var(--color-danger-glow),
+      0 0 40px var(--color-danger-glow);
+  }
+  to {
+    text-shadow:
+      0 0 40px var(--color-danger-glow),
+      0 0 80px var(--color-danger-glow),
+      0 0 120px var(--color-danger-glow);
+  }
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.backBtn {
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  transition: background-color var(--transition);
+  margin-top: 1rem;
+}
+
+.backBtn:hover {
+  background-color: var(--color-surface-hover);
+}
